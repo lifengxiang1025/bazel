@@ -266,6 +266,10 @@ An index registry must follow the format below:
                 resolved to `<registry_path>/<module_base_path>/<path>`.
                 Registry must be hosted locally and used by `--registry=file://<registry_path>`.
                 Otherwise, Bazel will throw an error.
+      * The type can be changed to use a git repository with these fields:
+          *   `type`: `git_repository`
+          *   `remote`: The URI of the remote Git repository.
+          *   `branch`: Branch in the remote repository to checked out. Precisely one of branch, tag, or commit must be specified.
     *   `patches/`: An optional directory containing patch files, only used when `source.json` has "archive" type.
 
 ### Bazel Central Registry {:#bazel-central-registry}
